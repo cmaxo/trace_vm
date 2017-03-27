@@ -30,8 +30,13 @@ alias grep='grep --color=tty'
 export EDITOR=vi
 
 activate () {
+    # I don't like the (pyenv) showing up in the prompt as all of the l2l virtualenvs
+    #  have /pyenv as the location of the virtualenv. This will add the actual name
+    #  of the project to the prompt ala (traceui)
+    OLD_PS1="$PS1"
     if [ -f /opt/l2l/$1/pyenv/bin/activate ]; then
         . /opt/l2l/$1/pyenv/bin/activate
+        PS1="$OLD_PS1"
         export PS1=($1)$PS1
     fi
 }
@@ -43,4 +48,5 @@ export NVM_DIR="/home/vagrant/.nvm"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
+
 source /usr/bin/virtualenvwrapper.sh
