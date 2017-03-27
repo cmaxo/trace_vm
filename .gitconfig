@@ -3,7 +3,6 @@
     email = corey@leading2lean.com
 [core]
     autocrlf = true
-    excludesfile = C:\\Users\\Corey\\Documents\\gitignore_global.txt
 [alias]
     co = checkout
     ci = commit
