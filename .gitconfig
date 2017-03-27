@@ -1,0 +1,18 @@
+[user]
+    name = Corey Olsen
+    email = corey@leading2lean.com
+[core]
+    autocrlf = true
+    excludesfile = C:\\Users\\Corey\\Documents\\gitignore_global.txt
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    d = diff
+    l = log --stat
+[rerere]
+    enabled = true
+    autoupdate = true
+[color]
+	ui = auto

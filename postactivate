@@ -1,0 +1,10 @@
+#!/bin/bash
+# This hook is sourced after every virtualenv is activated.
+
+PYENV_BASENAME=`basename $VIRTUAL_ENV`
+PYENV_DIRNAME=`dirname $VIRTUAL_ENV`
+if [ "$PYENV_BASENAME" == "pyenv" ] ; then
+    PS1="(`basename \"$PYENV_DIRNAME\"`)$_OLD_VIRTUAL_PS1"
+else
+    PS1="(`basename \"$VIRTUAL_ENV\"`)$_OLD_VIRTUAL_PS1"
+fi
